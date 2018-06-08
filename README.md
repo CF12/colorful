@@ -1,2 +1,0 @@
-# colorful
-Created with CodeSandbox
