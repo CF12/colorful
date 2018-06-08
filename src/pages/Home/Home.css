@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial');
+
+p {
+  font-family: Questrial, sans-serif;
+}
+
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.body {
+  width: 100%;
+  height: 100vh;
+}
+
+.body__title {
+  font-size: 128px;
+  letter-spacing: 0.6px;
+  color: #ff9b17;
+  text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.body__description {
+  color: gray;
+  font-size: 22px;
+  margin-top: 12px;
+}
+
+.body__button {
+  height: 200px;
+  width: 300px;
+  margin: 50px 20px;
+
+  text-decoration: none;
+  color: black;
+
+  background-color: white;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.3);
+
+  transition:
+    box-shadow 0.1s ease,
+    color 0.1s ease,
+    background-color 0.1s ease;
+}
+
+.body__button:hover {
+  box-shadow: 1px 1px 10px 3px #4fa6ee;
+  color: white;
+  background-color: #2193b0;
+}
+
+.body__button__text {
+  margin-top: 32px;
+  font-size: 28px;
+  /* color: grey; */
+}
+
+.body__button--experiment {
+
+}
