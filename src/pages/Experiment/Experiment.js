@@ -2,16 +2,16 @@ import React from 'react'
 
 import './Experiment.css'
 
-const StateContext = new React.createContext(this.state)
+const QuestionContext = new React.createContext(1)
 
 class Question1 extends React.PureComponent {
   render () {
     return (
       <div>
         <p>What's your gender?</p>
-        <StateContext.Consumer>
-          <button onClick={() => { this }}
-        </StateContext.Consumer>
+        <QuestionContext.Consumer>
+          <button onClick={(question) => { question = 2 }}>Test</button>
+        </QuestionContext.Consumer>
       </div>
     )
   }
@@ -40,12 +40,14 @@ export default class Experiment extends React.PureComponent {
   }
 
   render () {
-
     return (
       <div>
-        <StateContext.Provider>
-          { questions[this.state.question] }
-        </StateContext.Provider>
+        <QuestionContext.Provider>
+          <QuestionContext.Consumer>
+            {question => console.log(question)}
+            { question => questions[question] }
+          </QuestionContext.Consumer>
+        </QuestionContext.Provider>
       </div>
     )
   }
