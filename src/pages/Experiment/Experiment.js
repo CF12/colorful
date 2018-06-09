@@ -5,12 +5,12 @@ import './Experiment.css'
 const StateContext = new React.createContext()
 
 class Question1 extends React.PureComponent {
-  render () {
+  render (props) {
     return (
       <div>
         <p>What's your gender?</p>
         <StateContext.Consumer>
-          <button onClick={(question) => { question = 2 }}>Test</button>
+          { state => <button onClick={() => { state.setQuestion(2) }}>Hello!</button> }
         </StateContext.Consumer>
       </div>
     )
@@ -18,7 +18,7 @@ class Question1 extends React.PureComponent {
 }
 
 class Question2 extends React.PureComponent {
-  render() {
+  render () {
     return (
       <p>What's your favorite color?</p>
     )
@@ -35,16 +35,22 @@ export default class Experiment extends React.PureComponent {
     super()
 
     this.state = {
-      question: 1
+      question: 1,
+      setQuestion: (value) => this.setState({ question: value })
     }
   }
 
-  render () {
+  render (props) {
     return (
-      <div>
-        <StateContext.Provider value={this.state}>
-          <Question1 />
-        </StateContext.Provider>
+      <div className='experiment flex--center'>
+        <div className='experiment__wrapper flex--center'>
+          <StateContext.Provider value={this.state}>
+            <Question1 />
+            <StateContext.Consumer>
+              { state => <p> {state.question} </p> }
+            </StateContext.Consumer>
+          </StateContext.Provider>
+        </div>
       </div>
     )
   }
