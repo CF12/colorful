@@ -4,27 +4,32 @@ p {
   font-family: Questrial, sans-serif;
 }
 
+body {
+  background-image: linear-gradient(to right top, #2bdc67, #00dd99, #00dac1, #00d6dd, #12cfeb);
+}
+
 .particles {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 99vh;
   z-index: -1;
 }
 
 .body {
   width: 100%;
   height: 100vh;
+
 }
 
 .body__title {
   font-size: 128px;
-  letter-spacing: 0.6px;
-  color: #ff9b17;
+  letter-spacing: 0.8px;
+  color: #ffb435;
   text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 .body__description {
-  color: gray;
+  color: white;
   font-size: 22px;
   margin-top: 12px;
 }
@@ -38,21 +43,20 @@ p {
   color: black;
 
   background-color: white;
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  box-sizing: border-box;
+  border-radius: 2px;
 
   box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.3);
 
   transition:
-    box-shadow 0.1s ease,
-    color 0.1s ease,
-    background-color 0.1s ease;
+    color 0.1s,
+    background-color 0.1s;
 }
 
 .body__button:hover {
-  box-shadow: 1px 1px 10px 3px #4fa6ee;
   color: white;
-  background-color: #2193b0;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  background-color: #8121f7;
 }
 
 .body__button__text {

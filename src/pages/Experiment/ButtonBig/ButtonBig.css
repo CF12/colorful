@@ -1,0 +1,36 @@
+.button--big {
+  width: 300px;
+  height: 250px;
+
+  margin: 12px;
+
+  background-color: white;
+  box-sizing: border-box;
+  border-radius: 2px;
+
+  box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.3);
+
+  transition:
+    color 0.1s,
+    background-color 0.1s,
+    box-shadow 0.1s;
+}
+
+.button--big > p {
+  color: black;
+  font-size: 32px;
+}
+
+.button--big:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.5);
+}
+
+.button--big__active {
+  background-color: #2cab9c;
+  box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.8);
+}
+
+.button--big__active > p {
+  color: white;
+}
