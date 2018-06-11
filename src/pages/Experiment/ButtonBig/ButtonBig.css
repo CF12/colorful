@@ -27,8 +27,8 @@
 }
 
 .button--big__active {
-  background-color: #2cab9c;
-  box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.8);
+  background-color: #21c2b3;
+  box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.5);
 }
 
 .button--big__active > p {
