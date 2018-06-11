@@ -17,12 +17,12 @@ export default class Experiment extends React.PureComponent {
           {
             text: 'Male',
             value: 'male',
-            iconName: ''
+            iconName: 'FaMale'
           },
           {
             text: 'Female',
             value: 'female',
-            iconName: ''
+            iconName: 'FaFemale'
           },
           {
             text: 'Other / Don\'t specify',

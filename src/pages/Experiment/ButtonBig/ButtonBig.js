@@ -1,5 +1,7 @@
 import React from 'react'
 
+import * as FontAwesome from 'react-icons/lib/fa'
+
 import './ButtonBig.css'
 
 export default class ButtonBig extends React.PureComponent {
@@ -13,6 +15,10 @@ export default class ButtonBig extends React.PureComponent {
     this.valueKey = props.valueKey
     this.value = props.value
     this.active = props.active
+
+    this.icon = FontAwesome[this.iconName]
+
+    console.log(FontAwesome[this.iconName])
   }
 
   componentWillReceiveProps (newProps) {
@@ -25,6 +31,7 @@ export default class ButtonBig extends React.PureComponent {
         className={'flex--center flex--column button--big ' + (this.active ? 'button--big__active' : '')}
         onClick={() => { this.handler(this.buttonKey, this.value) }}>
         <p>{this.text}</p>
+        <this.icon />
       </div>
     )
   }
