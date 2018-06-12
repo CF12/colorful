@@ -4,7 +4,12 @@ p {
   font-family: Questrial, sans-serif;
 }
 
-body {
+.body {
+  width: 100%;
+  height: 100vh;
+
+  z-index: -1;
+  position: absolute;
   background-image: linear-gradient(to right top, #2bdc67, #00dd99, #00dac1, #00d6dd, #12cfeb);
 }
 
@@ -13,12 +18,6 @@ body {
   width: 100%;
   height: 99vh;
   z-index: -1;
-}
-
-.body {
-  width: 100%;
-  height: 100vh;
-
 }
 
 .body__title {

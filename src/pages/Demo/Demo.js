@@ -5,7 +5,7 @@ import './Demo.css'
 // TODO: https://stackoverflow.com/questions/45598854/passing-props-through-react-router-v4-link/45599159
 
 export default class Demo extends React.PureComponent {
-  constructor () {
+  constructor() {
     super()
 
     this.state = {
@@ -19,15 +19,19 @@ export default class Demo extends React.PureComponent {
     }
   }
 
-  render () {
+  render() {
     return (
       <div>
         <div className='demo__navbar' style={{ backgroundColor: this.state.colors.tertiary }} />
         <div className='demo__sidebar' style={{ backgroundColor: this.state.colors.primary2 }}>
-        
+
         </div>
-        
-        <p>How does this look?</p>
+
+        <div className='demo__body flex--center'>
+          <p className='demo__title'>How does this look?</p>
+        </div>
+
+
 
       </div>
     )
