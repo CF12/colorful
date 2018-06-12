@@ -16,18 +16,20 @@
     box-shadow 0.1s;
 }
 
-.button--big > p {
-  color: black;
-  font-size: 32px;
-}
-
 .button--big:hover {
   cursor: pointer;
   box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.5);
 }
 
+.button--big > p {
+  margin-bottom: 20px;
+  color: #626262;
+  font-size: 24px;
+}
+
 .button--big__active {
   background-color: #21c2b3;
+  color: white;
   box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.5);
 }
 

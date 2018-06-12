@@ -13,6 +13,55 @@
   box-shadow: 5px 5px 12px 2px rgba(0, 0, 0, 0.5);
 }
 
-.experiment__next-button {
-  
+.experiment__button {
+  width: 200px;
+  height: 80px;
+
+  background-color: white;
+  box-sizing: border-box;
+  border-radius: 2px;
+
+  box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.3);
+
+  transition:
+    color 0.1s,
+    background-color 0.1s,
+    box-shadow 0.1s;
+}
+
+.experiment__button:hover {
+  cursor: pointer;
+  color: white;
+  box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.5);
+}
+
+.experiment__button--next {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+
+.experiment__button--next:hover {
+  background-color: #2bdc67;
+}
+
+.experiment__button--prev {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+}
+
+.experiment__button--prev:hover {
+  background-color: #3083ba;
+}
+
+.experiment__button > p {
+  font-size: 32px;
+  margin-right: 4px;
+}
+
+.experiment__counter {
+  position: absolute;
+  font-size: 40px;
+  bottom: 60px;
 }

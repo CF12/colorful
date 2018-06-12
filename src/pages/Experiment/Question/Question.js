@@ -4,10 +4,11 @@ import './Question.css'
 
 import ButtonBig from '../ButtonBig/ButtonBig'
 
-export default class Question extends React.PureComponent {
+export default class Question extends React.Component {
   constructor (props) {
     super()
 
+    this.id = props.id
     this.question = props.question
     this.buttons = props.buttons
 
@@ -17,8 +18,17 @@ export default class Question extends React.PureComponent {
     }
   }
 
-  getValue () {
-    return this.state
+  componentWillMount () {
+    const state = this.props.stateGetter(this.props.id)
+
+    this.setState({
+      active: state.active,
+      value: state.value
+    })
+  }
+
+  componentWillUnmount () {
+    this.props.stateUpdater(this.props.id, this.state)
   }
 
   clickHandler (key, value) {
