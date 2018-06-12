@@ -112,7 +112,7 @@ const questionData = {
       {
         text: 'Other / Don\'t specify',
         value: 'other',
-        iconName: ''
+        iconName: 'question'
       }
     ]},
   2: {
@@ -122,12 +122,12 @@ const questionData = {
       {
         text: 'Morning',
         value: 'morning',
-        iconName: ''
+        iconName: 'sun-o'
       },
       {
         text: 'Evening',
         value: 'evening',
-        iconName: ''
+        iconName: 'moon-o'
       }
     ]},
   3: {
@@ -137,17 +137,17 @@ const questionData = {
       {
         text: 'Summer',
         value: 'summer',
-        iconName: ''
+        iconName: 'sun-o'
       },
       {
         text: 'Spring',
         value: 'spring',
-        iconName: ''
+        iconName: 'pagelines'
       },
       {
         text: 'Fall',
         value: 'fall',
-        iconName: ''
+        iconName: 'leaf'
       },
       {
         text: 'Winter',
