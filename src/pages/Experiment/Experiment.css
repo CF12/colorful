@@ -14,12 +14,14 @@
 }
 
 .experiment__button {
-  width: 160px;
+  width: 180px;
   height: 70px;
 
   background-color: white;
   box-sizing: border-box;
   border-radius: 2px;
+
+  user-select: none;
 
   box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.3);
 
@@ -35,23 +37,23 @@
   box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.5);
 }
 
-.experiment__button--next {
+.experiment__button--right {
   position: absolute;
   bottom: 40px;
   right: 40px;
 }
 
-.experiment__button--next:hover {
+.experiment__button--green:hover {
   background-color: #2bdc67;
 }
 
-.experiment__button--prev {
+.experiment__button--left {
   position: absolute;
   left: 40px;
   bottom: 40px;
 }
 
-.experiment__button--prev:hover {
+.experiment__button--blue:hover {
   background-color: #3083ba;
 }
 

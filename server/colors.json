@@ -1,0 +1,40 @@
+{
+  "male": [
+    {
+      "style": "dark",
+      "colors": [
+        "#664e4c",
+        "#c1d37f",
+        "#e2d58b",
+        "#f0e2a3",
+        "#f9d4bb"
+      ]
+    }
+  ],
+
+  "female": [
+    {
+      "style": "dark",
+      "colors": [
+        "#D06461",
+        "#F8DCCC",
+        "#DAB76F",
+        "#8ABB94",
+        "#CBF6EA"
+      ]
+    }
+  ],
+
+  "winter": [
+    {
+      "style": "dark",
+      "colors": [
+        "#345392",
+        "#397ec3",
+        "#70a8dd",
+        "#8fc0e7",
+        "#c7deed"
+      ]
+    }
+  ]
+}

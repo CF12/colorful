@@ -1,3 +1,7 @@
+.demo {
+
+}
+
 .demo__navbar {
   width: 100%;
   height: 60px;
@@ -11,6 +15,135 @@
 }
 
 .demo__body {
-  margin-top: 30px;
-  margin-left: 230px;
+  /* padding-top: 30px;
+  padding-left: 230px; */
+
+  width: 100% - 230px;
+  height: 100vh;
+}
+
+.demo__title {
+  font-size: 52px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.demo__button-wrapper {
+  flex-wrap: wrap;
+}
+
+.demo__button {
+  width: 300px;
+  height: 200px;
+
+  margin: 40px 20px;
+
+  background-color: white;
+  box-sizing: border-box;
+  border-radius: 2px;
+
+  user-select: none;
+
+  font-size: 16px;
+  text-align: center;
+
+  box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.3);
+
+  transition:
+    color 0.1s,
+    background-color 0.1s,
+    box-shadow 0.1s;
+}
+
+.demo__button:hover {
+  cursor: pointer;
+  color: white;
+  box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.5);
+}
+
+.demo__button--1:hover {
+  background-color: #d54545;
+}
+
+.demo__button--2:hover {
+  background-color: #e07024;
+}
+
+.demo__button--3:hover {
+  background-color: #c6c62a;
+}
+
+.demo__button--4:hover {
+  background-color: #369cd7;
+}
+
+.demo__button--5:hover {
+  background-color: #36d76d;
+}
+
+.demo__demos > div {
+  margin: 20px;
+}
+
+.demo__demo-button {
+  width: 250px;
+  height: 100px;
+
+  box-sizing: border-box;
+  border-radius: 2px;
+
+  user-select: none;
+
+  font-size: 16px;
+  text-align: center;
+
+  box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 2px 5px black;
+
+  transition:
+    color 0.1s,
+    background-color 0.1s,
+    box-shadow 0.1s;
+}
+
+.demo__demo-button:hover {
+  cursor: pointer;
+  color: white;
+  box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.5);
+}
+
+.demo__demo-box {
+  width: 300px;
+  height: 200px;
+
+  box-sizing: border-box;
+
+  font-size: 24px;
+  text-align: center;
+
+  text-shadow: 1px 1px 5px black;
+}
+
+.demo__demo-paragraph {
+  width: 400px;
+  height: 400px;
+
+  border-radius: 2px;
+  border: 1px solid white;
+
+  font-size: 16px;
+  text-align: center;
+}
+
+.demo__demo-paragraph > p {
+  margin: 20px;
+  font-size: 18px;
+  text-align: justify;
+}
+
+.demo__demo-paragraph__wrapper {
+  width: inherit;
+  height: 100px;
+
+  font-size: 24px;
+  text-shadow: 1px 1px 5px black;
 }

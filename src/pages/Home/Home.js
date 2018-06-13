@@ -25,10 +25,10 @@ export default class Home extends React.Component {
           </p>
 
           <div className='body__button__wrapper flex--center'>
-            <Link to='/' className='body__button body__button--colors flex--center flex--column'>
+            {/* <Link to='/' className='body__button body__button--colors flex--center flex--column'>
               <IoAndroidColorPalette size={64} />
               <p className='body__button__text'>Browse Palettes</p>
-            </Link>
+            </Link> */}
 
             <Link to='experiment' className='body__button body__button--experiment flex--center flex--column'>
               <IoErlenmeyerFlask size={64} />

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import './Experiment.css'
 
@@ -14,12 +15,36 @@ export default class Experiment extends React.PureComponent {
   constructor () {
     super()
 
-    this.questions = {}
+    const getQuestionState = (id) => {
+      return this.state.questions[id]
+    }
+
+    const setQuestionState = (id, state) => {
+      this.setState(_.merge(this.state, {
+        questions: {
+          [id]: state
+        }
+      }))
+    }
+
+    this.nextQuestion = (value) => this.setState({
+      question: (this.state.question + 1 in questionData)
+        ? this.state.question + 1
+        : this.state.question
+    })
+
+    this.prevQuestion = (value) => this.setState({
+      question: (this.state.question - 1 in questionData)
+        ? this.state.question - 1
+        : this.state.question
+    })
+
+    let questions = {}
 
     for (const key in questionData) {
       const data = questionData[key]
 
-      this.questions[key] = {
+      questions[key] = {
         value: '',
         active: -1,
         field: data.field,
@@ -28,41 +53,26 @@ export default class Experiment extends React.PureComponent {
           id={key}
           question={data.question}
           buttons={data.buttons}
-          stateUpdater={this.setQuestionState}
-          stateGetter={this.getQuestionState}
+          stateUpdater={setQuestionState}
+          stateGetter={getQuestionState}
         />
       }
     }
 
     this.state = {
       question: 1,
-      questions: this.questions,
-      nextQuestion: (value) => this.setState({
-        question: (this.state.question + 1 in questionData)
-          ? this.state.question + 1
-          : this.state.question
-      }),
-      prevQuestion: (value) => this.setState({
-        question: (this.state.question - 1 in questionData)
-          ? this.state.question - 1
-          : this.state.question
-      })
+      questions: questions
     }
   }
 
-  getQuestionState = (id) => {
-    return this.state.questions[id]
-  }
+  getData () {
+    let res = {}
 
-  setQuestionState = (id, state) => {
-    console.log(state)
-    this.setState(_.merge(this.state, {
-      questions: {
-        [id]: state
-      }
-    }))
+    for (const entry of _.values(this.state.questions)) {
+      res[entry.field] = entry.value
+    }
 
-    console.log(this.state.questions[id])
+    return res
   }
 
   render () {
@@ -73,15 +83,29 @@ export default class Experiment extends React.PureComponent {
 
             { this.state.questions[this.state.question].component }
 
-            <div className='experiment__button experiment__button--next flex--center' onClick={this.state.nextQuestion}>
-              <p>Next</p>
-              <FaAngleDoubleRight size={32} />
-            </div>
-
-            <div className='experiment__button experiment__button--prev flex--center' onClick={this.state.prevQuestion}>
+            <div
+              className='experiment__button experiment__button--left experiment__button--blue flex--center'
+              onClick={this.prevQuestion}>
               <FaAngleDoubleLeft size={32} />
               <p>Back</p>
             </div>
+
+            {
+              (this.state.question === _.keys(questionData).length)
+                ? <Link to={{ pathname: '/demo', state: JSON.stringify(this.getData()) }}>
+                  <div
+                    className='experiment__button experiment__button--right experiment__button--green flex--center'
+                    onClick={this.nextQuestion}>
+                    <p>Submit</p>
+                    <FaAngleDoubleRight size={32} />
+                  </div>
+                </Link>
+                : <div className='experiment__button experiment__button--right experiment__button--blue flex--center'
+                  onClick={this.nextQuestion}>
+                  <p>Next</p>
+                  <FaAngleDoubleRight size={32} />
+                </div>
+            }
 
             <div className='experiment__counter'>
               <p> {this.state.question} / {Object.keys(questionData).length} </p>
@@ -152,26 +176,6 @@ const questionData = {
       {
         text: 'Winter',
         value: 'winter',
-        iconName: ''
-      }
-    ]},
-  4: {
-    question: 'What\'s your favorite color?',
-    field: 'favColor',
-    buttons: [
-      {
-        text: 'Male',
-        value: 'male',
-        iconName: ''
-      },
-      {
-        text: 'Female',
-        value: 'female',
-        iconName: ''
-      },
-      {
-        text: 'Other / Don\'t specify',
-        value: 'other',
         iconName: ''
       }
     ]}
