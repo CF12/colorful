@@ -24,10 +24,44 @@ export default class Demo extends React.PureComponent {
   }
 
   fetchColors (query) {
-    axios.post('/api/palette', query)
-      .then((res) => {
-        this.setState(res.data[0])
-      })
+    // axios.post('/api/palette', query)
+    //   .then((res) => {
+    //     this.setState(res.data[0])
+    //   })
+    const colors = [
+      {
+        style: 'dark',
+        colors: [
+          '#664e4c',
+          '#c1d37f',
+          '#e2d58b',
+          '#f0e2a3',
+          '#f9d4bb'
+        ]
+      },
+      {
+        style: 'dark',
+        colors: [
+          '#D06461',
+          '#F8DCCC',
+          '#DAB76F',
+          '#8ABB94',
+          '#CBF6EA'
+        ]
+      },
+      {
+        style: 'dark',
+        colors: [
+          '#345392',
+          '#397ec3',
+          '#70a8dd',
+          '#8fc0e7',
+          '#c7deed'
+        ]
+      }
+    ]
+
+    this.setState(colors[Math.floor(Math.random() * colors.length)])
   }
 
   render () {
