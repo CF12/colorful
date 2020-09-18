@@ -70,13 +70,15 @@ export default class Demo extends React.PureComponent {
     }
 
     return (
-      <div className='demo'>
+      <div className='demo flex--column'>
         {/* <div className='demo__navbar' style={{ backgroundColor: this.state.colors[0] }} />
         <div className='demo__sidebar' style={{ backgroundColor: this.state.colors[1] }} /> */}
 
         <div
-          className='demo__body flex--center flex--column'
-          style={{ backgroundImage: `linear-gradient(to right, ${this.state.colors[0]}, ${this.state.colors[2]})` }}>
+          className='demo__showcase'
+          style={{ backgroundImage: `linear-gradient(to right, ${this.state.colors[0]}, ${this.state.colors[2]})` }} />
+
+        <div className='demo__body flex--center flex--column'>
           <p className='demo__title' style={textStyles}>How does this color scheme look?</p>
 
           <div className='demo__button-wrapper flex--center flex--row'>

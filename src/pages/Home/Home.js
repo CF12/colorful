@@ -19,7 +19,9 @@ export default class Home extends React.Component {
           />
 
           <p className='body__title'>colorful</p>
-          <p className='body__description'>A very colorful experiment.</p>
+          <p className='body__description'>
+            A colorful experiment that aims to find out how certain people react to certain color schemes
+          </p>
           <p className='body__description'>
             Developed by <a href='https://github.com/cf12/'>Brian Xiang</a>
           </p>

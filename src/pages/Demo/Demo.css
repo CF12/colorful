@@ -14,6 +14,11 @@
   height: 100%;
 }
 
+.demo__showcase {
+  width: 100%;
+  height: 600px;
+}
+
 .demo__body {
   /* padding-top: 30px;
   padding-left: 230px; */
